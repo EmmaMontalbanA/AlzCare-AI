@@ -1,6 +1,6 @@
-# alzheimer_detection
-Detección temprana de Alzheimer
-Acerca del conjunto de datos
+# Detección temprana de Alzheimer
+
+Conjunto de datos
 Este conjunto de datos contiene información de salud extensa para 2149 pacientes, cada uno identificado de forma única con un ID que va desde 4751 a 6900. El conjunto de datos incluye detalles demográficos, factores de estilo de vida, historial médico, mediciones clínicas, evaluaciones cognitivas y funcionales, síntomas y un diagnóstico de la enfermedad de Alzheimer. Los datos son ideales para investigadores y científicos de datos que buscan explorar los factores asociados con el Alzheimer, desarrollar modelos predictivos y realizar análisis estadísticos.
 
 Tabla de contenido
