@@ -87,7 +87,7 @@ class TomographyImageUploader:
         }
     
     def upload_images(self, image_paths):
-        """
+        """ 
         Subir imágenes a MongoDB
         
         :param image_paths: Lista de rutas de imágenes
