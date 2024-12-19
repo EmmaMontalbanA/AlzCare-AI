@@ -1,5 +1,5 @@
 import pandas as pd
-from modelos_copy import AlzheimerDetector
+from modelos import AlzheimerDetector
 
 
 # Model selection and evaluation with LazyPredict
@@ -40,3 +40,7 @@ print(lazypredict_results)
 # Crear modelo de ensamble
 print("\nCreando Modelo de Ensamble...")
 ensemble_model, metrics = detector.create_ensemble_model()
+
+# Crear red neuronal
+print("\nCreando Red Neuronal...")
+nn_model, metrics = detector.create_neural_network()
