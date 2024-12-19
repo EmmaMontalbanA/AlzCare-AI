@@ -124,13 +124,22 @@ class ModelFactory:
     @staticmethod
     def create_ensemble():
         """Create ensemble model"""
-        from sklearn.ensemble import VotingClassifier, BaggingClassifier
+        from sklearn.ensemble import VotingClassifier, BaggingClassifier, RandomForestClassifier
         from lightgbm import LGBMClassifier
         from xgboost import XGBClassifier
         
         base_models = {
-            'LightGBM': LGBMClassifier(random_state=42),
-            'XGBoost': XGBClassifier(random_state=42),
+            'LightGBM': LGBMClassifier(
+                random_state=42,
+                n_estimators=100,
+                learning_rate=0.1),
+            'RandomForest': RandomForestClassifier(
+                n_estimators=100,
+                max_depth=None,
+                min_samples_split=2,
+                min_samples_leaf=1,
+                max_features='sqrt',
+                random_state=42),
             'Bagging': BaggingClassifier(
                 base_estimator=LGBMClassifier(), 
                 n_estimators=10, 
@@ -140,7 +149,8 @@ class ModelFactory:
         
         return VotingClassifier(
             estimators=[(name, model) for name, model in base_models.items()],
-            voting='hard'
+            voting='soft',  # Cambiado a 'soft' para usar probabilidades
+            weights=[1] * len(base_models)  # Pesos iguales para todos los modelos
         ), base_models
 
     @staticmethod
