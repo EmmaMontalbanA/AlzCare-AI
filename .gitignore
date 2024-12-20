@@ -163,6 +163,7 @@ cython_debug/
 #.idea/
 .data/
 *.png
+*.jpg
 *.csv
 *.pkl
 *.h5
