@@ -152,15 +152,8 @@ Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
 
 3. Envía un pull request.
 
-## Licencia 🔒
 
-Este proyecto está bajo la licencia MIT. Consulta `LICENSE` para más información.
 
-## Contacto 📧
 
-Para preguntas o sugerencias:
-
-- **Nombre:** Emma Montalbán
-- **Correo:** [emma.montalban@example.com](mailto:emma.montalban@example.com)
 
 
